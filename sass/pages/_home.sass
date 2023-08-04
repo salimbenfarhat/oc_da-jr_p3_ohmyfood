@@ -1,0 +1,55 @@
+main
+  section#banner
+    background: $bg
+    text-align: center
+    padding: 2rem
+    h2
+      font-weight: 700
+      font-size: 24px
+    p
+      margin: 1.5rem 0
+      font-weight: 300
+      font-size: 18px
+  section#steps
+    height: 440px
+    padding: 2rem 1rem
+    h2
+      @include title
+      margin: 1rem 0 1rem 0
+    ol
+      list-style-type: decimal
+      li 
+        margin: 2.4rem 0 2.4rem 0
+        background-color: #f6f6f6
+        position: relative
+        border-radius: 20px
+        display: flex
+        align-items: center
+        padding: 1.6rem 0
+        box-shadow: 0px 4px 15px 0px #00000026
+        span.steps__number
+          width: 24px
+          height: 24px
+          background: $primary
+          border-radius: 100px
+          @include align-center
+          color: #fff
+        i
+          margin: 0 1rem
+          color: #7e7e7e
+        i:hover
+          color: $primary
+  section#restaurants
+    background: #F3F3F3
+    text-align: center
+    padding: 1rem
+    h2
+      font-size: 24px
+      font-weight: 700
+      margin: 1rem 0 1rem 0
+      text-align: left
+    .cards
+      display: grid
+      grid-template-columns: repeat(1,1fr)
+      column-gap: 2rem
+      row-gap: 2rem
