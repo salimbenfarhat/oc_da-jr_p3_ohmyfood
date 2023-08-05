@@ -53,3 +53,21 @@ main
       grid-template-columns: repeat(1,1fr)
       column-gap: 2rem
       row-gap: 2rem
+
+@media (min-width: 376px)
+  main
+    section#steps
+      height: 228px
+      margin: 0 10rem
+      ol
+        display: flex
+        li
+          flex: 1
+          margin-right: 2.4rem
+    section#restaurants
+      height: 608px
+      padding: 0 10rem
+      h2
+        padding-top: 2em
+      .cards
+        grid-template-columns: repeat(2, 1fr)

@@ -175,17 +175,15 @@ footer nav#footer-menu {
   padding: 1rem;
   color: #fff;
 }
-footer nav#footer-menu ul li:nth-child(1) {
+footer nav#footer-menu h2 {
   margin-bottom: 1.4rem;
-}
-footer nav#footer-menu ul li {
-  margin: 0.5rem 0;
-}
-footer nav#footer-menu ul li h2 {
   font-family: "Shrikhand";
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
+}
+footer nav#footer-menu ul li {
+  margin: 0.5rem 0;
 }
 footer nav#footer-menu ul li a {
   color: white;
@@ -198,6 +196,27 @@ footer nav#footer-menu ul li a i {
   width: 1rem;
 }
 
+@media (min-width: 376px) {
+  footer {
+    justify-content: right;
+  }
+  footer nav#footer-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: auto;
+    padding: 1.6rem 3rem;
+  }
+  footer nav#footer-menu h2 {
+    margin-left: 10rem;
+  }
+  footer nav#footer-menu ul li {
+    float: left;
+    margin: 0 1rem 0 0;
+  }
+  footer nav#footer-menu ul li:nth-child(2) {
+    margin-right: 3rem;
+  }
+}
 main section#banner {
   background: #F3F3F3;
   text-align: center;
@@ -270,6 +289,29 @@ main section#restaurants .cards {
   row-gap: 2rem;
 }
 
+@media (min-width: 376px) {
+  main section#steps {
+    height: 228px;
+    margin: 0 10rem;
+  }
+  main section#steps ol {
+    display: flex;
+  }
+  main section#steps ol li {
+    flex: 1;
+    margin-right: 2.4rem;
+  }
+  main section#restaurants {
+    height: 608px;
+    padding: 0 10rem;
+  }
+  main section#restaurants h2 {
+    padding-top: 2em;
+  }
+  main section#restaurants .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 body, html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
@@ -278,4 +320,10 @@ body, html {
 #main-container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 376px) {
+  #main-container {
+    max-width: none;
+  }
 }/*# sourceMappingURL=main.css.map */
