@@ -136,6 +136,17 @@ table {
   -webkit-text-stroke: 0;
 }
 
+header #return {
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+}
+header #return a {
+  color: #000;
+}
+header #return a i {
+  font-size: 24px;
+}
 header #logo {
   display: flex;
   align-items: center;
@@ -157,6 +168,12 @@ header #localization {
 }
 header #localization i {
   margin-right: 1em;
+}
+header #banner img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 200px;
 }
 
 @media (min-width: 376px) {

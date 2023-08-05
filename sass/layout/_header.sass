@@ -1,4 +1,12 @@
 header
+  #return
+    position: absolute
+    top: 1.2rem
+    left: 1rem
+    a
+      color: #000
+      i 
+        font-size: 24px
   #logo
     @include align-center
     height: 63px
@@ -13,6 +21,11 @@ header
     color: #353535
     i
       margin-right: 1em
+  #banner
+    img
+      width: 100%
+      object-fit: cover
+      max-height: 200px
 
 @media (min-width: 376px)
   header
