@@ -52,6 +52,7 @@ table {
 }
 
 .btn {
+  text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 100px;
   color: white;
@@ -136,10 +137,44 @@ table {
   -webkit-text-stroke: 0;
 }
 
+.tile {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+  margin: 6px 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.tile .titles {
+  display: flex;
+  flex-direction: column;
+}
+.tile h4 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 0.6rem;
+}
+.tile p {
+  font-weight: 300;
+  font-size: 15px;
+}
+.tile span {
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+header #top {
+  position: relative;
+}
 header #return {
   position: absolute;
-  top: 1.2rem;
-  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
 }
 header #return a {
   color: #000;
@@ -168,12 +203,6 @@ header #localization {
 }
 header #localization i {
   margin-right: 1em;
-}
-header #banner img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-height: 200px;
 }
 
 @media (min-width: 376px) {
@@ -331,6 +360,84 @@ main section#restaurants .cards a {
   }
   main section#restaurants .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+main div#banner img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 275px;
+}
+main section#menu {
+  background-color: #F6F6F6;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  margin-top: -5rem;
+  z-index: 1;
+  position: relative;
+  padding: 1em;
+}
+main section#menu header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 10px 40px 0;
+}
+main section#menu header h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-style: italic;
+}
+main section#menu header i {
+  color: white;
+  text-stroke: 1px #101010;
+  -webkit-text-stroke: 1px #101010;
+  transition: all 0.5s;
+  font-size: 24px;
+}
+main section#menu header i:hover {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-stroke: 0;
+  -webkit-text-stroke: 0;
+}
+main section#menu div#card div h3 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
+main section#menu div#card div .tiles {
+  margin: 0.6rem 0 2rem 0;
+}
+main section#menu div#card div#btn-order {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+main section#menu div#card div#btn-order a {
+  padding: 1.5rem 3rem;
+}
+
+@media (min-width: 376px) {
+  main div#banner img {
+    height: 383px;
+  }
+  main section#menu {
+    max-width: 1280px;
+    margin: -5rem auto auto auto;
+  }
+  main section#menu header {
+    justify-content: center;
+    padding: 1rem 2rem 0 1rem;
+  }
+  main section#menu header h2 {
+    margin-right: 2rem;
+  }
+  main section#menu div#card {
+    margin: 0 12rem;
   }
 }
 body, html {
