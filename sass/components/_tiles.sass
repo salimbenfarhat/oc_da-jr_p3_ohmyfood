@@ -7,18 +7,60 @@
   display: flex
   justify-content: space-between
   gap: 1rem
+  position: relative
+  overflow: hidden
   .titles
     display: flex
     flex-direction: column
-  h4
-    font-weight: 500
-    font-size: 18px
-    margin-bottom: 0.6rem
-  p
-    font-weight: 300
-    font-size: 15px
+    h4
+      font-weight: 500
+      font-size: 18px
+      margin-bottom: 0.6rem
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      line-height: 1.2em
+    p
+      font-weight: 300
+      font-size: 15px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      line-height: 1.2em
   span
     font-weight: 700
     font-size: 15px
     display: flex
     align-items: flex-end
+    transition: 0.7s ease-in-out
+  .tick
+    position: absolute
+    text-align: center
+    right: -75px
+    top: 0
+    width: 75px
+    height: 82px
+    background-color: $tertiary
+    transition: 1s
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: 0.7s ease-in-out
+    i
+      animation: spin 0.4s linear
+      animation-delay: 0.3S
+.tile:hover
+  .tick
+    right: 0px
+    transition: 0.7s ease-in-out
+    z-index: 2
+  span
+    transform: translateX(-260%)
+    transition: 0.7s ease-in-out
+  .titles
+    flex: 0 0 70%
+    transition: 0.7s ease-in-out
+    h4
+      width: 80%
+    p 
+      width: 80%
