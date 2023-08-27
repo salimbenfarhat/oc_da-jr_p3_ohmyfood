@@ -149,7 +149,6 @@ table {
 }
 .card .text-block .text-block__icon i {
   color: white;
-  text-stroke: 1px #101010;
   -webkit-text-stroke: 1px #101010;
   transition: all 0.5s;
   font-size: 24px;
@@ -158,7 +157,6 @@ table {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-stroke: 0;
   -webkit-text-stroke: 0;
 }
 
@@ -491,7 +489,6 @@ main section#menu header h2 {
 }
 main section#menu header i {
   color: white;
-  text-stroke: 1px #101010;
   -webkit-text-stroke: 1px #101010;
   transition: all 0.5s;
   font-size: 24px;
@@ -500,7 +497,6 @@ main section#menu header i:hover {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-stroke: 0;
   -webkit-text-stroke: 0;
 }
 main section#menu div#card div h3 {
