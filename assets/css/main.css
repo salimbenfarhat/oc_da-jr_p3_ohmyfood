@@ -18,6 +18,14 @@
     display: none;
   }
 }
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -163,25 +171,74 @@ table {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 .tile .titles {
   display: flex;
   flex-direction: column;
 }
-.tile h4 {
+.tile .titles h4 {
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 0.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2em;
 }
-.tile p {
+.tile .titles p {
   font-weight: 300;
   font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2em;
 }
 .tile span {
   font-weight: 700;
   font-size: 15px;
   display: flex;
   align-items: flex-end;
+  transition: 0.7s ease-in-out;
+}
+.tile .tick {
+  position: absolute;
+  text-align: center;
+  right: -75px;
+  top: 0;
+  width: 75px;
+  height: 82px;
+  background-color: #99E2D0;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.7s ease-in-out;
+}
+.tile .tick i {
+  animation: spin 0.4s linear;
+  animation-delay: 0.3S;
+}
+
+.tile:hover .tick {
+  right: 0px;
+  transition: 0.7s ease-in-out;
+  z-index: 2;
+}
+.tile:hover span {
+  transform: translateX(-260%);
+  transition: 0.7s ease-in-out;
+}
+.tile:hover .titles {
+  flex: 0 0 70%;
+  transition: 0.7s ease-in-out;
+}
+.tile:hover .titles h4 {
+  width: 80%;
+}
+.tile:hover .titles p {
+  width: 80%;
 }
 
 header #top {
@@ -300,7 +357,7 @@ footer nav#footer-menu ul li a i {
   border: 4px solid #9356DC;
   border-top-color: transparent;
   border-radius: 50%;
-  animation: spin 7s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 .loader--active {
@@ -455,6 +512,21 @@ main section#menu div#card div h3 {
 }
 main section#menu div#card div .tiles {
   margin: 0.6rem 0 2rem 0;
+}
+main section#menu div#card div#starters,
+main section#menu div#card div#main-dishes,
+main section#menu div#card div#desserts {
+  animation: fadein 1s linear;
+  animation-fill-mode: both;
+}
+main section#menu div#card div#starters {
+  animation-delay: 1s;
+}
+main section#menu div#card div#main-dishes {
+  animation-delay: 2s;
+}
+main section#menu div#card div#desserts {
+  animation-delay: 3s;
 }
 main section#menu div#card div#btn-order {
   display: flex;
