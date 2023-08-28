@@ -217,6 +217,7 @@ table {
 .tile .tick i {
   animation: spin 0.4s linear;
   animation-delay: 0.3S;
+  color: #FFF;
 }
 
 .tile:hover .tick {
@@ -311,7 +312,6 @@ footer nav#footer-menu ul li a {
 }
 footer nav#footer-menu ul li a i {
   margin-right: 1em;
-  width: 1rem;
 }
 
 @media (min-width: 376px) {
