@@ -26,6 +26,27 @@
     opacity: 1;
   }
 }
+main section#steps ol li span.steps__number, .loader2, header #localization, header #logo, .tile .tick, .card .text-block__icon, .card a .text-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section#restaurants h2, main section#steps h2, main section#banner h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+footer nav#footer-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+footer nav#footer-menu ul li a i {
+  margin-right: 1em;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -99,7 +120,10 @@ table {
   color: inherit;
   display: block;
 }
-.card img {
+.card a {
+  display: block;
+}
+.card a img {
   height: 131px;
   width: 100%;
   border: 0 solid transparent;
@@ -108,8 +132,8 @@ table {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card span.badge {
-  background-color: #99e2d0;
+.card a span.badge {
+  background-color: #99E2D0;
   color: #1b6150;
   padding: 0.5rem;
   border-radius: 0.125rem;
@@ -117,43 +141,40 @@ table {
   top: 1rem;
   right: 0.75rem;
 }
-.card .text-block {
+.card a .text-block {
   padding: 1rem;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.card .text-block .text-block__title {
+.card a .text-block .text-block__title {
   flex: 1;
   text-align: left;
 }
-.card .text-block .text-block__title h3 {
+.card a .text-block .text-block__title h3 {
   margin: 0 0 0.25rem;
   font-size: 18px;
   font-weight: 700;
 }
-.card .text-block .text-block__title p {
+.card a .text-block .text-block__title p {
   font-size: 17px;
   font-weight: 300;
 }
-.card .text-block .text-block__icon {
+.card .text-block__icon {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
   border: transparent 0px solid;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  right: 2em;
+  bottom: 1em;
 }
-.card .text-block .text-block__icon i {
+.card .text-block__icon i {
   color: white;
   -webkit-text-stroke: 1px #101010;
   transition: all 0.5s;
   font-size: 24px;
 }
-.card .text-block .text-block__icon i:hover {
+.card .text-block__icon i:hover {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -162,7 +183,7 @@ table {
 
 .tile {
   background: #FFFFFF;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   margin: 6px 0;
   padding: 1rem;
@@ -209,9 +230,6 @@ table {
   height: 82px;
   background-color: #99E2D0;
   transition: 1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: 0.7s ease-in-out;
 }
 .tile .tick i {
@@ -256,9 +274,6 @@ header #return a i {
   font-size: 24px;
 }
 header #logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 63px;
 }
 header #logo h1 {
@@ -267,9 +282,6 @@ header #logo h1 {
   font-size: 30px;
 }
 header #localization {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 50px;
   background: #EAEAEA;
   color: #353535;
@@ -304,15 +316,6 @@ footer nav#footer-menu h2 {
 footer nav#footer-menu ul li {
   margin: 0.5rem 0;
 }
-footer nav#footer-menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-}
-footer nav#footer-menu ul li a i {
-  margin-right: 1em;
-}
 
 @media (min-width: 376px) {
   footer {
@@ -342,9 +345,6 @@ footer nav#footer-menu ul li a i {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 9999;
 }
 .loader2::after {
@@ -367,10 +367,6 @@ main section#banner {
   text-align: center;
   padding: 2rem;
 }
-main section#banner h2 {
-  font-weight: 700;
-  font-size: 24px;
-}
 main section#banner p {
   margin: 1.5rem 0;
   font-weight: 300;
@@ -381,8 +377,6 @@ main section#steps {
   padding: 2rem 1rem;
 }
 main section#steps h2 {
-  font-size: 24px;
-  font-weight: 700;
   margin: 1rem 0 1rem 0;
 }
 main section#steps ol {
@@ -396,24 +390,26 @@ main section#steps ol li {
   display: flex;
   align-items: center;
   padding: 1.6rem 0;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 main section#steps ol li span.steps__number {
   width: 24px;
   height: 24px;
   background: #9356DC;
   border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #fff;
+  margin-left: -0.75rem;
+  position: absolute;
 }
 main section#steps ol li i {
-  margin: 0 1rem;
+  margin-left: 1.5rem;
   color: #7e7e7e;
 }
 main section#steps ol li i:hover {
   color: #9356DC;
+}
+main section#steps ol li span {
+  margin-left: 1rem;
 }
 main section#restaurants {
   background: #F3F3F3;
@@ -421,8 +417,6 @@ main section#restaurants {
   padding: 1rem;
 }
 main section#restaurants h2 {
-  font-size: 24px;
-  font-weight: 700;
   margin: 1rem 0 1rem 0;
   text-align: left;
 }
@@ -476,24 +470,24 @@ main section#menu {
   position: relative;
   padding: 1em;
 }
-main section#menu header {
+main section#menu div#top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 40px 10px 40px 0;
 }
-main section#menu header h2 {
+main section#menu div#top h2 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-style: italic;
 }
-main section#menu header i {
+main section#menu div#top i {
   color: white;
   -webkit-text-stroke: 1px #101010;
   transition: all 0.5s;
   font-size: 24px;
 }
-main section#menu header i:hover {
+main section#menu div#top i:hover {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
