@@ -317,7 +317,7 @@ footer nav#footer-menu ul li {
   margin: 0.5rem 0;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 768px) {
   footer {
     justify-content: right;
   }
@@ -543,7 +543,17 @@ main section#menu div#card div#btn-order a {
     margin-right: 2rem;
   }
   main section#menu div#card {
-    margin: 0 12rem;
+    margin: 0 5%;
+  }
+}
+@media (min-width: 768px) {
+  main section#menu div#card {
+    margin: 0 10%;
+  }
+}
+@media (min-width: 1024px) {
+  main section#menu div#card {
+    margin: 0 20%;
   }
 }
 body, html {
