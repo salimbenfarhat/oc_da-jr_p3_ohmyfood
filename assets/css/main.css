@@ -196,12 +196,12 @@ table {
 .tile .titles {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 .tile .titles h4 {
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 0.6rem;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.2em;
@@ -209,7 +209,6 @@ table {
 .tile .titles p {
   font-weight: 300;
   font-size: 15px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.2em;
@@ -220,6 +219,7 @@ table {
   display: flex;
   align-items: flex-end;
   transition: 0.7s ease-in-out;
+  width: 10%;
 }
 .tile .tick {
   position: absolute;
@@ -227,7 +227,7 @@ table {
   right: -75px;
   top: 0;
   width: 75px;
-  height: 82px;
+  height: 100%;
   background-color: #99E2D0;
   transition: 1s;
   transition: 0.7s ease-in-out;
@@ -258,6 +258,11 @@ table {
   width: 80%;
 }
 
+@media (min-width: 768px) {
+  .tile:hover span {
+    transform: translateX(-130%);
+  }
+}
 header #top {
   position: relative;
 }
