@@ -26,12 +26,6 @@
     opacity: 1;
   }
 }
-main section#steps ol li span.steps__number, .loader2, header #localization, header #logo, .tile .tick, .card .text-block__icon, .card a .text-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 main section#restaurants h2, main section#steps h2, main section#banner h2 {
   font-size: 24px;
   font-weight: 700;
@@ -144,6 +138,9 @@ table {
 .card a .text-block {
   padding: 1rem;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card a .text-block .text-block__title {
   flex: 1;
@@ -164,6 +161,9 @@ table {
   background-color: transparent;
   border: transparent 0px solid;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   right: 2em;
   bottom: 1em;
@@ -204,6 +204,7 @@ table {
   margin-bottom: 0.6rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
   line-height: 1.2em;
 }
 .tile .titles p {
@@ -211,6 +212,7 @@ table {
   font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
   line-height: 1.2em;
 }
 .tile span {
@@ -219,7 +221,6 @@ table {
   display: flex;
   align-items: flex-end;
   transition: 0.7s ease-in-out;
-  width: 10%;
 }
 .tile .tick {
   position: absolute;
@@ -230,11 +231,14 @@ table {
   height: 100%;
   background-color: #99E2D0;
   transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.7s ease-in-out;
 }
 .tile .tick i {
   animation: spin 0.4s linear;
-  animation-delay: 0.3S;
+  animation-delay: 0.3s;
   color: #FFF;
 }
 
@@ -260,7 +264,7 @@ table {
 
 @media (min-width: 768px) {
   .tile:hover span {
-    transform: translateX(-130%);
+    transform: translateX(-300%);
   }
 }
 header #top {
@@ -279,6 +283,9 @@ header #return a i {
   font-size: 24px;
 }
 header #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 63px;
 }
 header #logo h1 {
@@ -287,6 +294,9 @@ header #logo h1 {
   font-size: 30px;
 }
 header #localization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   background: #EAEAEA;
   color: #353535;
@@ -302,8 +312,8 @@ header #localization i {
 }
 footer {
   display: flex;
-  align-items: center;
   justify-content: left;
+  align-items: center;
   height: 186px;
   background: #353535;
 }
@@ -350,6 +360,9 @@ footer nav#footer-menu ul li {
   width: 100%;
   height: 100%;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 9999;
 }
 .loader2::after {
@@ -360,11 +373,11 @@ footer nav#footer-menu ul li {
   border: 4px solid #9356DC;
   border-top-color: transparent;
   border-radius: 50%;
-  animation: spin 3s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 .loader--active {
-  animation: hide-loader 7s forwards;
+  animation: hide-loader 2s forwards;
 }
 
 main section#banner {
@@ -386,6 +399,7 @@ main section#steps h2 {
 }
 main section#steps ol {
   list-style-type: decimal;
+  padding: 0 1rem;
 }
 main section#steps ol li {
   margin: 2.4rem 0 2.4rem 0;
@@ -402,6 +416,9 @@ main section#steps ol li span.steps__number {
   height: 24px;
   background: #9356DC;
   border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   margin-left: -0.75rem;
   position: absolute;
@@ -437,10 +454,10 @@ main section#restaurants .cards a {
   color: #000;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 1024px) {
   main section#steps {
     height: 228px;
-    margin: 0 10rem;
+    margin: 0 6rem;
   }
   main section#steps ol {
     display: flex;
@@ -451,7 +468,7 @@ main section#restaurants .cards a {
   }
   main section#restaurants {
     height: 608px;
-    padding: 0 10rem;
+    padding: 0 6rem;
   }
   main section#restaurants h2 {
     padding-top: 2em;
@@ -477,8 +494,8 @@ main section#menu {
 }
 main section#menu div#top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   margin: 40px 10px 40px 0;
 }
 main section#menu div#top h2 {
