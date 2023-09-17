@@ -1,7 +1,5 @@
 footer
-    display: flex
-    align-items: center
-    justify-content: left
+    @include flexbox(null, left, center)
     height: 186px
     background: #353535
     nav#footer-menu
@@ -9,7 +7,7 @@ footer
         color: #fff
         h2
             margin-bottom: 1.4rem
-            font-family: 'Shrikhand'
+            font-family: $secondaryFont
             font-size: 18px
             font-style: italic
             font-weight: 400
@@ -22,8 +20,7 @@ footer
     footer
         justify-content: right
         nav#footer-menu
-            display: flex
-            flex-direction: row-reverse
+            @include flexbox(row-reverse, null, null)
             margin-top: auto
             padding: 1.6rem 3rem
             h2

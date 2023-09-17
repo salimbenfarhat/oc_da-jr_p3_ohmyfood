@@ -13,12 +13,10 @@ main
     position: relative
     padding: 1em
     div#top
-      display: flex
-      align-items: center
-      justify-content: space-between
+      @include flexbox(null, space-between, center)
       margin: 40px 10px 40px 0
       h2
-        font-family: "Shrikhand", cursive
+        font-family: $secondaryFont, cursive
         font-size: 28px
         font-style: italic
       i
@@ -51,8 +49,7 @@ main
       div#desserts
         animation-delay: 3s
       div#btn-order
-        display: flex
-        justify-content: center
+        @include flexbox(null, center, null)
         padding: 2rem 0
         a
           padding: 1.5rem 3rem

@@ -4,14 +4,13 @@
   border-radius: 15px
   margin: 6px 0
   padding: 1rem
-  display: flex
+  @include flexbox(null, null, null)
   justify-content: space-between
   gap: 1rem
   position: relative
   overflow: hidden
   .titles
-    display: flex
-    flex-direction: column
+    @include flexbox(column, null, null)
     width: 80%
     h4
       font-weight: 500
@@ -19,20 +18,20 @@
       margin-bottom: 0.6rem
       overflow: hidden
       text-overflow: ellipsis
+      white-space: nowrap
       line-height: 1.2em
     p
       font-weight: 300
       font-size: 15px
       overflow: hidden
       text-overflow: ellipsis
+      white-space: nowrap
       line-height: 1.2em
   span
     font-weight: 700
     font-size: 15px
-    display: flex
-    align-items: flex-end
+    @include flexbox(null, null, flex-end)
     transition: 0.7s ease-in-out
-    width: 10%
   .tick
     position: absolute
     text-align: center
@@ -42,11 +41,11 @@
     height: 100%
     background-color: $tertiary
     transition: 1s
-    @extend %align-center
+    @include flexbox(null, center, center)
     transition: 0.7s ease-in-out
     i
       animation: spin 0.4s linear
-      animation-delay: 0.3S
+      animation-delay: 0.3s
       color: #FFF
 .tile:hover
   .tick
@@ -66,4 +65,4 @@
 @media (min-width: 768px)
   .tile:hover
     span
-      transform: translateX(-130%)
+      transform: translateX(-300%)

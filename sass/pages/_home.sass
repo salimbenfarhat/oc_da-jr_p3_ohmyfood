@@ -1,7 +1,7 @@
 .loader2
   @include loader($primary, 100px)
 .loader--active
-  animation: hide-loader 7s forwards
+  animation: hide-loader 2s forwards
 main
   section#banner
     background: $bg
@@ -21,13 +21,13 @@ main
       margin: 1rem 0 1rem 0
     ol
       list-style-type: decimal
+      padding: 0 1rem
       li 
         margin: 2.4rem 0 2.4rem 0
         background-color: #f6f6f6
         position: relative
         border-radius: 20px
-        display: flex
-        align-items: center
+        @include flexbox(null, null, center)
         padding: 1.6rem 0
         box-shadow: 0px 4px 15px 0px rgba($black, 0.15)
         span.steps__number
@@ -35,7 +35,7 @@ main
           height: 24px
           background: $primary
           border-radius: 100px
-          @extend %align-center
+          @include flexbox(null, center, center)
           color: #fff
           margin-left: -0.75rem
           position: absolute
@@ -62,20 +62,19 @@ main
       a
         text-decoration: none
         color: $black
-
-@media (min-width: 376px)
+@media (min-width: 1024px)
   main
     section#steps
       height: 228px
-      margin: 0 10rem
+      margin: 0 6rem
       ol
-        display: flex
+        @include flexbox(null, null, null)
         li
           flex: 1
           margin-right: 2.4rem
     section#restaurants
       height: 608px
-      padding: 0 10rem
+      padding: 0 6rem
       h2
         padding-top: 2em
       .cards

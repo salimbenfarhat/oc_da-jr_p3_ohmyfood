@@ -11,14 +11,14 @@ header
       i 
         font-size: 24px
   #logo
-    @extend %align-center
+    @include flexbox(null, center, center)
     height: 63px
     h1
-      font-family: 'Shrikhand', cursive
+      font-family: $secondaryFont, cursive
       color: $black
       font-size: 30px      
   #localization
-    @extend %align-center
+    @include flexbox(null, center, center)
     height: 50px
     background: #EAEAEA
     color: #353535
