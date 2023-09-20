@@ -1,5 +1,5 @@
 main
-  div#banner
+  figure#banner
     img
       width: 100%
       object-fit: cover
@@ -27,8 +27,8 @@ main
       i:hover
           @include gradient(193.33, $primary, -11.44%, $secondary, 123.93%)
           -webkit-text-stroke: 0
-    div#card
-      div
+    article#card
+      section
         h3
           font-size: 16px
           font-weight: 300
@@ -37,25 +37,24 @@ main
           width: 40px
         .tiles 
           margin: 0.6rem 0 2rem 0
-      div#starters,
-      div#main-dishes,
-      div#desserts
+      section#starters,
+      section#main-dishes,
+      section#desserts
         animation: fadein 1s linear
         animation-fill-mode: both
-      div#starters
+      section#starters
         animation-delay: 1s
-      div#main-dishes
+      section#main-dishes
         animation-delay: 2s
-      div#desserts
+      section#desserts
         animation-delay: 3s
-      div#btn-order
+      button#btn-order
         @include flexbox(null, center, null)
-        padding: 2rem 0
-        a
-          padding: 1.5rem 3rem
+        padding: 1.5rem 3rem
+        margin: 2rem auto
 @media (min-width: 376px)
   main
-    div#banner
+    figure#banner
       img
         height: 383px
     section#menu
@@ -66,15 +65,15 @@ main
         padding: 1rem 2rem 0 1rem
         h2 
           margin-right: 2rem
-      div#card
+      article#card
         margin: 0 5%
 @media (min-width: 768px)
   main 
     section#menu 
-      div#card
+      article#card
         margin: 0 10%
 @media (min-width: 1024px)
   main 
     section#menu 
-      div#card
+      article#card
         margin: 0 20%
