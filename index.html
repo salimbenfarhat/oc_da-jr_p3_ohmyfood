@@ -5,116 +5,107 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ohmyfood</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
   <div class="loader2 loader--active"></div>
   <div id="main-container">
     <header>
-      <div id="logo">
-        <h1>Ohmyfood</h1>
-      </div>
-      <div id="localization">
-        <i class="fas fa-map-marker-alt"></i>
-        <h2>Paris, Belleville</h2>
-      </div>
+      <h1 id="logo">Ohmyfood</h1>
+      <address>
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        <span>Paris, Belleville</span>
+      </address>
     </header>
     <main>
       <section id="banner">
         <h2>Réservez le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a href="#" class="btn" title="Explorer nos restaurants">Explorer nos restaurants</a>
+        <button class="btn" title="Explorer nos restaurants">Explorer nos restaurants</button>
       </section>
       <section id="steps">
         <h2 class="title">Fonctionnement</h2>
         <ol>
           <li>
             <span class="steps__number">1</span>
-            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
             <span>Choisissez un restaurant</span>
           </li>
           <li>
             <span class="steps__number">2</span>
-            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-list-ul" aria-hidden="true"></i>
             <span>Composez votre menu</span>
           </li>
           <li>
             <span class="steps__number">3</span>
-            <i class="fas fa-store"></i>
+            <i class="fas fa-store" aria-hidden="true"></i>
             <span>Dégustez au restaurant</span>
           </li>
         </ol>
       </section>
       <section id="restaurants">
         <h2 class="title">Restaurants</h2>
-        <div class="cards">
-          <div class="card">
+        <article class="cards">
+          <article class="card">
             <a href="menu/la-palettte-du-gout.html" title="La palette du goût">
               <img src="./assets/images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
               <span class="badge">Nouveau</span>
-              <div class="text-block">
-                <div class="text-block__title">
-                  <h3>La palette du goût</h3>
-                  <p>Ménilmontant</p>
-                </div>
-              </div>
+              <figcaption>
+                <h3>La palette du goût</h3>
+                <p>Ménilmontant</p>
+              </figcaption>
             </a>
             <div class="text-block__icon">
-              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
             </div>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="menu/la-note-enchantee.html" title="La note enchantée">
               <img src="./assets/images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
               <span class="badge">Nouveau</span>
-              <div class="text-block">
-                <div class="text-block__title">
-                  <h3>La note enchantée</h3>
-                  <p>Charonne</p>
-                </div>
-              </div>
+              <figcaption>
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+              </figcaption>
             </a>
             <div class="text-block__icon">
-              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
             </div>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="menu/a-la-francaise.html" title="À la française">
               <img src="./assets/images/restaurants/a-la-francaise.jpg" alt="À la française">
-              <div class="text-block">
-                <div class="text-block__title">
-                  <h3>À la française</h3>
-                  <p>Cité Rouge</p>
-                </div>
-              </div>
+              <figcaption>
+                <h3>À la française</h3>
+                <p>Cité Rouge</p>
+              </figcaption>
             </a>
             <div class="text-block__icon">
-              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
             </div>
-          </div>
-          <div class="card">
+          </article>
+          <article class="card">
             <a href="menu/le-delice-des-sens.html" title="Le délice des sens">
               <img src="./assets/images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens">
-              <div class="text-block">
-                <div class="text-block__title">
-                  <h3>Le délice des sens</h3>
-                  <p>Folie-Méricourt</p>
-                </div>
-              </div>
+              <figcaption>
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </figcaption>
             </a>
             <div class="text-block__icon">
-              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
             </div>
-          </div>
-        </div>
+          </article>
+        </article>
       </section>            
     </main>
     <footer>
       <nav id="footer-menu">
         <h2>Ohmyfood</h2>
         <ul>
-          <li><a href="#"><i class="footer__icon fas fa-utensils"></i> Proposer un restaurant</a></li>
-          <li><a href="#"><i class="footer__icon fas fa-hands-helping"></i> Devenir partenaire</a></li>
+          <li><a href="#"><i class="footer__icon fas fa-utensils" aria-hidden="true"></i> Proposer un restaurant</a></li>
+          <li><a href="#"><i class="footer__icon fas fa-hands-helping" aria-hidden="true"></i> Devenir partenaire</a></li>
           <li><a href="#">Mentions légales</a></li>
           <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
