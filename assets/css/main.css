@@ -12,10 +12,15 @@
 @keyframes hide-loader {
   0% {
     opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }
 @keyframes fadein {
@@ -43,7 +48,7 @@ footer nav#footer-menu ul li a i {
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+a, abbr, acronym, address, article, big, button, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -106,7 +111,7 @@ table {
   background-image: linear-gradient(0deg, rgba(255, 121, 218, 0.9) 0%, rgba(147, 86, 220, 0.9) 100%);
 }
 
-.card {
+article.card {
   background-color: #fff;
   border-radius: 1rem;
   position: relative;
@@ -114,10 +119,10 @@ table {
   color: inherit;
   display: block;
 }
-.card a {
+article.card a {
   display: block;
 }
-.card a img {
+article.card a img {
   height: 131px;
   width: 100%;
   border: 0 solid transparent;
@@ -126,7 +131,7 @@ table {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card a span.badge {
+article.card a span.badge {
   background-color: #99E2D0;
   color: #1b6150;
   padding: 0.5rem;
@@ -135,27 +140,23 @@ table {
   top: 1rem;
   right: 0.75rem;
 }
-.card a .text-block {
+article.card a figcaption {
   padding: 1rem;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.card a .text-block .text-block__title {
-  flex: 1;
-  text-align: left;
-}
-.card a .text-block .text-block__title h3 {
+article.card a figcaption h3 {
   margin: 0 0 0.25rem;
   font-size: 18px;
   font-weight: 700;
 }
-.card a .text-block .text-block__title p {
+article.card a figcaption p {
   font-size: 17px;
   font-weight: 300;
 }
-.card .text-block__icon {
+article.card .text-block__icon {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
@@ -168,13 +169,13 @@ table {
   right: 2em;
   bottom: 1em;
 }
-.card .text-block__icon i {
+article.card .text-block__icon i {
   color: white;
   -webkit-text-stroke: 1px #101010;
-  transition: all 0.5s;
+  transition: all 4s ease;
   font-size: 24px;
 }
-.card .text-block__icon i:hover {
+article.card .text-block__icon i:hover {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -235,8 +236,6 @@ table {
   justify-content: center;
   align-items: center;
   transition: 0.7s ease-in-out;
-}
-.tile .tick i {
   animation: spin 0.4s linear;
   animation-delay: 0.3s;
   color: #FFF;
@@ -267,19 +266,17 @@ table {
     transform: translateX(-300%);
   }
 }
-header #top {
+header {
   position: relative;
 }
-header #return {
+header a#return {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 2rem;
-}
-header #return a {
   color: #000;
 }
-header #return a i {
+header a#return i {
   font-size: 24px;
 }
 header #logo {
@@ -287,13 +284,11 @@ header #logo {
   justify-content: center;
   align-items: center;
   height: 63px;
-}
-header #logo h1 {
   font-family: "Shrikhand", cursive;
   color: #000;
   font-size: 30px;
 }
-header #localization {
+header address {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,7 +296,7 @@ header #localization {
   background: #EAEAEA;
   color: #353535;
 }
-header #localization i {
+header address i {
   margin-right: 1em;
 }
 
@@ -373,11 +368,11 @@ footer nav#footer-menu ul li {
   border: 4px solid #9356DC;
   border-top-color: transparent;
   border-radius: 50%;
-  animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 .loader--active {
-  animation: hide-loader 2s forwards;
+  animation: hide-loader 3s forwards;
 }
 
 main section#banner {
@@ -442,14 +437,14 @@ main section#restaurants h2 {
   margin: 1rem 0 1rem 0;
   text-align: left;
 }
-main section#restaurants .cards {
+main section#restaurants article.cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   -moz-column-gap: 2rem;
        column-gap: 2rem;
   row-gap: 2rem;
 }
-main section#restaurants .cards a {
+main section#restaurants article.cards a {
   text-decoration: none;
   color: #000;
 }
@@ -473,11 +468,11 @@ main section#restaurants .cards a {
   main section#restaurants h2 {
     padding-top: 2em;
   }
-  main section#restaurants .cards {
+  main section#restaurants article.cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-main div#banner img {
+main figure#banner img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -515,42 +510,40 @@ main section#menu div#top i:hover {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0;
 }
-main section#menu div#card div h3 {
+main section#menu article#card section h3 {
   font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
 }
-main section#menu div#card div .tiles {
+main section#menu article#card section .tiles {
   margin: 0.6rem 0 2rem 0;
 }
-main section#menu div#card div#starters,
-main section#menu div#card div#main-dishes,
-main section#menu div#card div#desserts {
+main section#menu article#card section#starters,
+main section#menu article#card section#main-dishes,
+main section#menu article#card section#desserts {
   animation: fadein 1s linear;
   animation-fill-mode: both;
 }
-main section#menu div#card div#starters {
+main section#menu article#card section#starters {
   animation-delay: 1s;
 }
-main section#menu div#card div#main-dishes {
+main section#menu article#card section#main-dishes {
   animation-delay: 2s;
 }
-main section#menu div#card div#desserts {
+main section#menu article#card section#desserts {
   animation-delay: 3s;
 }
-main section#menu div#card div#btn-order {
+main section#menu article#card button#btn-order {
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
-}
-main section#menu div#card div#btn-order a {
   padding: 1.5rem 3rem;
+  margin: 2rem auto;
 }
 
 @media (min-width: 376px) {
-  main div#banner img {
+  main figure#banner img {
     height: 383px;
   }
   main section#menu {
@@ -564,17 +557,17 @@ main section#menu div#card div#btn-order a {
   main section#menu div#top h2 {
     margin-right: 2rem;
   }
-  main section#menu div#card {
+  main section#menu article#card {
     margin: 0 5%;
   }
 }
 @media (min-width: 768px) {
-  main section#menu div#card {
+  main section#menu article#card {
     margin: 0 10%;
   }
 }
 @media (min-width: 1024px) {
-  main section#menu div#card {
+  main section#menu article#card {
     margin: 0 20%;
   }
 }
