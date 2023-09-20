@@ -4,36 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ohmyfood</title>
+  <title>Ohmyfood - Restaurant "Ménilmontant" - Menu "La palette du goût"</title>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
   <div id="main-container">
     <header>
-      <div id="top">
-        <div id="return">
-          <a href="../index.html" title="Revenir à l'accueil">
-            <i class="fa-solid fa-arrow-left"></i>
-          </a>
-        </div>
-        <div id="logo">
-          <h1>Ohmyfood</h1>
-        </div>
-      </div>
+      <a id="return" href="../index.html" title="Revenir à l'accueil">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+      </a>
+      <h1 id="logo">Ohmyfood</h1>
     </header>
     <main>
-      <div id="banner">
+      <figure id="banner">
         <img src="../assets/images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
-      </div>
+      </figure>
       <section id="menu">
         <div id="top">
           <h2>La palette du goût</h2>
           <a href="#" title="Ajouter aux favoris">
-            <i class="fa fa-heart"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
           </a>
         </div>
-        <div id="card">
-          <div id="starters">
+        <article id="card">
+          <section id="starters">
             <h3>Entrées</h3>
             <div class="tiles">
               <div class="tile">
@@ -42,9 +37,7 @@
                   <p>Au piment d'Espelette</p>
                 </div>
                 <span>25€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
               <div class="tile">
                 <div class="titles">
@@ -52,9 +45,7 @@
                   <p>Et ses copeaux de truffe noire</p>
                 </div>
                 <span>35€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
               <div class="tile">
                 <div class="titles">
@@ -62,13 +53,11 @@
                   <p>Assaisonné à la truffe sur lit de caviar</p>
                 </div>
                 <span>20€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
             </div>
-          </div>
-          <div id="main-dishes">
+          </section>
+          <section id="main-dishes">
             <h3>Plats</h3>
             <div class="tiles">
               <div class="tile">
@@ -77,9 +66,7 @@
                   <p>Accompagné de sa ribambelle de légumes</p>
                 </div>
                 <span>40€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
               <div class="tile">
                 <div class="titles">
@@ -87,9 +74,7 @@
                   <p>À la truffe noire sur sa purée de panais</p>
                 </div>
                 <span>35€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
               <div class="tile">
                 <div class="titles">
@@ -97,13 +82,11 @@
                   <p>Aux agrumes</p>
                 </div>
                 <span>44€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
             </div>
-          </div>
-          <div id="desserts">
+          </section>
+          <section id="desserts">
             <h3>Desserts</h3>
             <div class="tiles">
               <div class="tile">
@@ -112,9 +95,7 @@
                   <p>Revisité</p>
                 </div>
                 <span>18€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
               <div class="tile">
                 <div class="titles">
@@ -122,9 +103,7 @@
                   <p>Et glace à la vanille de Madagascar</p>
                 </div>
                 <span>22€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
               <div class="tile">
                 <div class="titles">
@@ -132,24 +111,20 @@
                   <p>Au piment d'Espelette et à la truffe noire</p>
                 </div>
                 <span>23€</span>
-                <div class="tick">
-                  <i class="fas fa-check-circle" aria-hidden="true"></i>
-                </div>
+                <i class="tick fas fa-check-circle" aria-hidden="true"></i>
               </div>
             </div>
-          </div>
-          <div id="btn-order">
-            <a href="#" class="btn" title="Commander le menu">Commander</a>
-          </div>
-        </div>
+          </section>
+          <button id="btn-order" class="btn" title="Commander le menu">Commander</button>
+        </article>
       </section>
     </main>
     <footer>
       <nav id="footer-menu">
         <h2>Ohmyfood</h2>
         <ul>
-          <li><a href="#"><i class="footer__icon fas fa-utensils"></i> Proposer un restaurant</a></li>
-          <li><a href="#"><i class="footer__icon fas fa-hands-helping"></i> Devenir partenaire</a></li>
+          <li><a href="#"><i class="footer__icon fas fa-utensils" aria-hidden="true"></i> Proposer un restaurant</a></li>
+          <li><a href="#"><i class="footer__icon fas fa-hands-helping" aria-hidden="true"></i> Devenir partenaire</a></li>
           <li><a href="#">Mentions légales</a></li>
           <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
